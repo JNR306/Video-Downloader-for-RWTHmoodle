@@ -1,0 +1,28 @@
+{
+  "name": "Video Downloader for RWTHmoodle",
+  "description": "Adds the ability to easily download the Opencast Videos in RWTHmoodle.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "IconColor16.png",
+    "48": "IconColor48.png",
+    "128": "IconColor128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "IconLight16.png",
+      "32": "IconLight32.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "*://engage.streaming.rwth-aachen.de/search/episode.json?id=*"
+  ],
+  "permissions": [
+    "webRequest",
+    "downloads"
+  ]
+}

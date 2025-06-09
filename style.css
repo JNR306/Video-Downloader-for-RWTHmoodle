@@ -1,0 +1,138 @@
+body {
+    background-color: #1e1e1e;
+    width: 300px;
+}
+h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    color: white;
+    margin: 15px;
+}
+.box {
+    background-color: #2c3238;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+#title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    font-size: medium;
+    color: white;
+    font-weight: bold;
+}
+#info {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    font-size: small;
+    color: #8594a7;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+.button {
+    display: inline-block;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    font-size: medium;
+    color: #8594a7;
+    background-color: #2c3238;
+    border-radius: 15px;
+    height: 30px;
+    width: 130px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#buttons {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.quality {
+    display: inline-block;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    font-size: medium;
+    color: white;
+    text-align: left;
+    /*line-height: 50px;*/
+    flex-grow: 1;
+}
+.link {
+    width: 250px;
+    /*background-color: red;*/
+    display: flex;
+    flex-wrap: nowrap;
+    height: 40px;
+    align-items: center;
+}
+#links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.open {
+    display: inline-block;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    font-size: medium;
+    color: white;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    align-self: flex-end;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-image: url("OpenIcon.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+}
+.download {
+    display: inline-block;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    font-size: medium;
+    color: #002855;
+    background-color: #8cc1ff;
+    border-radius: 15px;
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    padding-left: 18px;
+    align-self: flex-end;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-image: url("DownloadIcon.svg");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 15px center;
+}
+#error {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#errormessage {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    font-size: medium;
+    color: white;
+    height: 23px;
+    text-align: center;
+    font-weight: bold;
+    /*background-color: red;*/
+    background-image: url("ErrorIcon.svg");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center 0px;
+    padding-top: 34px;
+    text-justify: bottom;
+}
