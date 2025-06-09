@@ -1,3 +1,7 @@
+// popup.js -- Version 1.0
+// Copyright (c) 2025 JNR306
+// https://github.com/JNR306/Video-Downloader-for-RWTHmoodle
+
 document.addEventListener("DOMContentLoaded", () => {
     const linklist = document.getElementById("links");
     const titleElement = document.getElementById("title");

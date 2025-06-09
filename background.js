@@ -1,3 +1,7 @@
+// background.js -- Version 1.0
+// Copyright (c) 2025 JNR306
+// https://github.com/JNR306/Video-Downloader-for-RWTHmoodle
+
 let extractedLinks = [];
 let title = "Unknown Title";
 
