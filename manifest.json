@@ -1,11 +1,11 @@
-// manifest.json -- Version 1.0
+// manifest.json -- Version 1.1
 // Copyright (c) 2025 JNR306
 // https://github.com/JNR306/Video-Downloader-for-RWTHmoodle
 
 {
   "name": "Video Downloader for RWTHmoodle",
   "description": "Adds the ability to easily download the Opencast Videos in RWTHmoodle.",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 3,
   "icons": {
     "16": "IconColor16.png",
