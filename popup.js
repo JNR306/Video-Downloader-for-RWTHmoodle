@@ -111,8 +111,8 @@ function updateIcon() {
     const theme = window.matchMedia('(prefers-color-scheme: dark)').matches;
     chrome.action.setIcon({
         path: {
-            16: theme ? "IconDark16.png" : "IconLight16.png",
-            32: theme ? "IconDark32.png" : "IconLight32.png"
+            16: theme ? "icons/IconDark16.png" : "icons/IconLight16.png",
+            32: theme ? "icons/IconDark32.png" : "icons/IconLight32.png"
         }
     });
 }

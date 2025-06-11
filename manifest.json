@@ -8,15 +8,15 @@
   "version": "1.1",
   "manifest_version": 3,
   "icons": {
-    "16": "IconColor16.png",
-    "48": "IconColor48.png",
-    "128": "IconColor128.png"
+    "16": "icons/IconColor16.png",
+    "48": "icons/IconColor48.png",
+    "128": "icons/IconColor128.png"
   },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "IconLight16.png",
-      "32": "IconLight32.png"
+      "16": "icons/IconLight16.png",
+      "32": "icons/IconLight32.png"
     }
   },
   "background": {
