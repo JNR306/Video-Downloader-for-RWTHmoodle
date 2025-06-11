@@ -1,4 +1,4 @@
-// popup.js -- Version 1.1
+// popup.js -- Version 1.2
 // Copyright (c) 2025 JNR306
 // https://github.com/JNR306/Video-Downloader-for-RWTHmoodle
 

@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.2 - 2025-06-12
+
+### Added
+- Support for Firefox
+
 ## 1.1 - 2025-06-10
 
 ### Added
