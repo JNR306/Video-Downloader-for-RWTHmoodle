@@ -28,6 +28,7 @@
   ],
   "permissions": [
     "webRequest",
-    "downloads"
+    "downloads",
+    "storage"
   ]
 }

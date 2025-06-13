@@ -30,7 +30,8 @@
   ],
   "permissions": [
     "webRequest",
-    "downloads"
+    "downloads",
+    "storage"
   ],
   "browser_specific_settings": {
     "gecko": {

@@ -5,6 +5,22 @@
 let extractedLinks = [];
 let title = chrome.i18n.getMessage("unknownTitle");
 
+async function loadSessionData() {
+    try {
+        const result = await chrome.storage.session.get(['extractedLinks', 'title']);
+        if (result.extractedLinks) {
+            extractedLinks = result.extractedLinks;
+        }
+        if (result.title) {
+            title = result.title;
+        }
+    } catch (error) {
+        console.warn("Loading session data was not possible:", error);
+    }
+}
+
+loadSessionData();
+
 chrome.webRequest.onCompleted.addListener(
     function(details) {
 
@@ -56,6 +72,8 @@ chrome.webRequest.onCompleted.addListener(
 
                         //console.log("Extracted Links:", extractedLinks);
 
+                        chrome.storage.session.set({extractedLinks: extractedLinks, title: title}).catch(error => console.error("Error saving to session storage:", error));
+                        
                         chrome.runtime.sendMessage({
                             type: "updateLinks",
                             links: extractedLinks,
@@ -87,6 +105,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === "clearLinks") {
         extractedLinks = [];
         title = chrome.i18n.getMessage("unknownTitle");
+
+        chrome.storage.session.remove(['extractedLinks', 'title']).catch(error => console.error("Error clearing session data:", error));
+        
         sendResponse({
             links: extractedLinks,
             title: title
