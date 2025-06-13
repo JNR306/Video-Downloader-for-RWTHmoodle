@@ -28,7 +28,7 @@
     "description": "Text for the download link."
   },
   "infoMessage": {
-    "message": "Wenn das Video nicht richtig erkannt wird, versuchen Sie, die Seite neu zu laden oder das Video zu starten.",
+    "message": "Wenn das Video nicht richtig erkannt wird, versuchen Sie, die Seite neu zu laden.",
     "description": "Informational message for troubleshooting."
   },
   "reloadPageButton": {
