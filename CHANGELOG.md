@@ -2,10 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
-## 1.2 - 2025-06-12
+## 1.2 - 2025-06-13
 
 ### Added
 - Support for Firefox
+- Language support for English and German
+- Links are now persistent until you close the browser or clear them
 
 ## 1.1 - 2025-06-10
 
