@@ -3,7 +3,7 @@
 // https://github.com/JNR306/Video-Downloader-for-RWTHmoodle
 
 let extractedLinks = [];
-let title = "Unknown Title";
+let title = chrome.i18n.getMessage("unknownTitle");
 
 chrome.webRequest.onCompleted.addListener(
     function(details) {
@@ -28,14 +28,14 @@ chrome.webRequest.onCompleted.addListener(
 
                         tracks.forEach(track => {
                             if (track.mimetype === "video/mp4" && track.url) {
-                                let quality = "Unknown";
+                                let quality = "-";
                                 if (track.tags && track.tags.tag && track.tags.tag.length > 0) {
                                     const qualityTag = track.tags.tag[0];
                                     const match = qualityTag.match(/(\d+p)/);
                                     if (match && match[0]) {
                                         quality = parseInt(match[0]);
                                     } else {
-                                        qualiy = qualityTag;
+                                        quality = qualityTag;
                                     }
                                 }
 
@@ -54,7 +54,7 @@ chrome.webRequest.onCompleted.addListener(
                             title = data.result[0].mediapackage.title;
                         }
 
-                        console.log("Extracted Links:", extractedLinks);
+                        //console.log("Extracted Links:", extractedLinks);
 
                         chrome.runtime.sendMessage({
                             type: "updateLinks",
@@ -62,6 +62,7 @@ chrome.webRequest.onCompleted.addListener(
                             title: title
                         }, (response) => {
                             if (chrome.runtime.lastError) {
+                                console.warn("Error sending message to popup:", chrome.runtime.lastError.message);
                             }
                         });
                     }
@@ -85,7 +86,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === "clearLinks") {
         extractedLinks = [];
-        title = "Unknown Title";
+        title = chrome.i18n.getMessage("unknownTitle");
         sendResponse({
             links: extractedLinks,
             title: title

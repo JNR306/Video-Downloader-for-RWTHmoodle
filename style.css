@@ -8,7 +8,7 @@ https://github.com/JNR306/Video-Downloader-for-RWTHmoodle
 }
 body {
     background-color: light-dark(#f3f3f3,#1e1e1e);
-    width: 300px;
+    width: 310px;
 }
 h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
@@ -46,7 +46,7 @@ h2 {
     background-color: light-dark(white,#2c3238);
     border-radius: 15px;
     height: 30px;
-    width: 130px;
+    width: 135px;
     text-align: center;
     line-height: 30px;
     text-decoration: none;
@@ -73,7 +73,7 @@ h2 {
     flex-grow: 1;
 }
 .link {
-    width: 250px;
+    width: 260px;
     /*background-color: red;*/
     display: flex;
     flex-wrap: nowrap;
@@ -107,7 +107,6 @@ h2 {
     filter: invert(100%);
 }
 .open:hover {
-    /*filter: brightness(0) saturate(100%) invert(63%) sepia(14%) saturate(450%) hue-rotate(174deg) brightness(90%) contrast(85%);*/
     opacity: 0.5;
 }
 @media (prefers-color-scheme: dark) {
@@ -123,24 +122,24 @@ h2 {
     background-color: #8cc1ff;
     border-radius: 15px;
     height: 30px;
-    width: 120px;
     text-align: center;
     line-height: 30px;
     text-decoration: none;
-    padding-left: 18px;
     align-self: flex-end;
     margin-top: auto;
     margin-bottom: auto;
     background-image: url("icons/DownloadIcon.svg");
     background-repeat: no-repeat;
     background-size: 18px;
-    background-position: 15px center;
+    background-position: 12px center;
+    padding-left: 37px;
+    padding-right: 15px;
 }
 .download:hover {
     background-color: light-dark(#f3f3f3,white);
 }
 #error {
-    width: 250px;
+    width: 260px;
     height: 100px;
     display: flex;
     align-items: center;

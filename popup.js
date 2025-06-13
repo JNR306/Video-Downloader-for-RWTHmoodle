@@ -10,6 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const reloadElement = document.getElementById("reload");
     const clearElement = document.getElementById("clear");
 
+    document.getElementById("popuptitle").textContent = chrome.i18n.getMessage("popupTitle");
+    document.getElementById("sectionheader").textContent = chrome.i18n.getMessage("sectionHeader");
+    document.getElementById("info").textContent = chrome.i18n.getMessage("infoMessage");
+    document.getElementById("errormessage").textContent = chrome.i18n.getMessage("noVideoFound");
+    document.getElementById("title").textContent = chrome.i18n.getMessage("unknownTitle");
+    reloadElement.textContent = chrome.i18n.getMessage("reloadPageButton");
+    clearElement.textContent = chrome.i18n.getMessage("clearButton");
+
     function displayLinks(links, title) {
         linklist.innerHTML = "";
 
@@ -35,8 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 open.target = "_blank";
 
                 download.href = item.url;
-                //download.download = `${item.quality}p-${title}.mp4`;
-                download.textContent = "Download";
+                download.textContent = chrome.i18n.getMessage("downloadLink");
 
                 download.addEventListener('click', (event) => {
                     event.preventDefault();
@@ -83,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function displayTitle(title) {
-        titleElement.innerHTML = title;
+        titleElement.textContent = title;
     }
 
     chrome.runtime.sendMessage({type: "requestLinks"}, (response) => {

@@ -1,0 +1,42 @@
+{
+  "extensionName": {
+    "message": "Video Downloader for RWTHmoodle",
+    "description": "The name of the extension."
+  },
+  "extensionDescription": {
+    "message": "Adds the ability to easily download Opencast videos in RWTHmoodle.",
+    "description": "The description of the extension."
+  },
+  "popupTitle": {
+    "message": "Video Downloader",
+    "description": "Title of the popup window."
+  },
+  "sectionHeader": {
+    "message": "Video Downloads",
+    "description": "Header for the video downloads section."
+  },
+  "unknownTitle": {
+    "message": "Unknown Title",
+    "description": "Placeholder for video title when unknown."
+  },
+  "noVideoFound": {
+    "message": "No video was found",
+    "description": "Error message when no video is detected."
+  },
+  "downloadLink": {
+    "message": "Download",
+    "description": "Text for the download link."
+  },
+  "infoMessage": {
+    "message": "If the video is not properly recognized, try reloading the page or starting the video.",
+    "description": "Informational message for troubleshooting."
+  },
+  "reloadPageButton": {
+    "message": "Reload page",
+    "description": "Text for the reload page button."
+  },
+  "clearButton": {
+    "message": "Clear",
+    "description": "Text for the clear button."
+  }
+}
