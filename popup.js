@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const reloadElement = document.getElementById("reload");
     const clearElement = document.getElementById("clear");
 
+    //update labels of HTML elements with translated strings
     document.getElementById("popuptitle").textContent = chrome.i18n.getMessage("popupTitle");
     document.getElementById("sectionheader").textContent = chrome.i18n.getMessage("sectionHeader");
     document.getElementById("info").textContent = chrome.i18n.getMessage("infoMessage");
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     reloadElement.textContent = chrome.i18n.getMessage("reloadPageButton");
     clearElement.textContent = chrome.i18n.getMessage("clearButton");
 
+    //update the HTML that displays the video links
     function displayLinks(links, title) {
         linklist.innerHTML = "";
 
@@ -45,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 download.href = item.url;
                 download.textContent = chrome.i18n.getMessage("downloadLink");
 
+                //download the video from the collected url if the user requests to by pressing the corresponding button
                 download.addEventListener('click', (event) => {
                     event.preventDefault();
                     const filename = `${item.quality}p-${title}.mp4`;
@@ -68,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    //reload current browser page if the user presses the corresponding button for troubleshooting
     reloadElement.addEventListener('click', (event) => {
         event.preventDefault();
 
@@ -78,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    //request deletion of video links if the user presses the corresponding button
     clearElement.addEventListener('click', (event) => {
         event.preventDefault();
 
@@ -89,10 +94,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    //update the HTML that displays the video title
     function displayTitle(title) {
         titleElement.textContent = title;
     }
 
+    //request the video links from the background script to display them if the popup is opened
     chrome.runtime.sendMessage({type: "requestLinks"}, (response) => {
         if (response && response.links) {
             displayLinks(response.links, response.title);
@@ -100,6 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    //receiving the request by the background script to update the UI
     chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         if (request.type === "updateLinks") {
             if (request.links) {
@@ -114,6 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateIcon();
 });
 
+//update the toolbar icon of the extension according to light or dark mode
 function updateIcon() {
     const theme = window.matchMedia('(prefers-color-scheme: dark)').matches;
     chrome.action.setIcon({
