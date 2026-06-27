@@ -14,58 +14,20 @@ This Chrome/Firefox Extension adds the ability to easily download Opencast video
 
 ## Installation
 
+### Firefox:
+
+**Firefox Web Store:** https://addons.mozilla.org/de/firefox/addon/video-downloader-rwthmoodle/
+
+### Chrome/Edge/Arc:
+
 > [!NOTE]
-> This Extension is currently not available on the Chrome or Firefox Web Store!
-
-<details>
-  <summary>
-
-<h3> Firefox Release/Beta </h3>
-  </summary>
-
-1. Download the latest .xpi from the GitHub Releases.
-2. Open `about:debugging`.
-3. Switch to "This Firefox" on this page.
-4. Click "Load Temporary Add-on" and select the downloaded .xpi.
-
-</details>
-
-> [!IMPORTANT]
-> You can only install add-ons temporarily in the release and beta versions of Firefox! They will vanish when you restart the browser.
-
-<details>
-  <summary>
-
-<h3> Firefox Nightly/Developer Edition </h3>
-  </summary>
-
-#### Temporary add-on:
-
-See installation for Firefox Realese/Beta.
-
-#### Permanent add-on:
-
-1. Open `about:config`.
-2. Change xpinstall.signatures.required to false. This will deactivate the requirement that add-ons need to be signed. Change back to true to revers this action.
-3. Download the latest .xpi from the GitHub Releases.
-4. Open `about:addons`.
-5. Click the gear icon next to "Manage Your Extensions".
-6. Choose "Install add-on from file" and select the downloaded .xpi.
-
-</details>
-
-<details>
-  <summary>
-
-<h3> Chrome/Edge/Arc </h3>
-  </summary>
+> This Extension is currently not available on the Chrome Web Store!
+> See the following steps to install it manually:
 
 1. Download and unpack the latest .zip from the GitHub Releases.
 2. Open `chrome://extensions` or `edge://extensions` or `arc://extensions`.
-3. Enable developer mode on this page.
+3. Enable developer mode on that page.
 4. Click "load unpacked extension" and select the unpacked folder that contains the manifest.json.
-
-</details>
 
 ## How to Use
 1. Navigate to a video lecture page on RWTHmoodle.
